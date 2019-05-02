@@ -1,0 +1,13 @@
+{
+  "name": "sport",
+  "utterances": [
+    "are you a sportive",
+    "what sport ?",
+    "Do you practice sport ?",
+    "What sport do you like ?"
+  ],
+  "slots": [],
+  "contexts": [
+    "sport"
+  ]
+}

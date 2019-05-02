@@ -1,0 +1,111 @@
+{
+  "version": "0.0.1",
+  "catchAll": {
+    "next": [
+      {
+        "condition": "temp['nb_question_pro'] == 3",
+        "node": "rebellion.flow.json"
+      }
+    ],
+    "onReceive": []
+  },
+  "startNode": "entry",
+  "nodes": [
+    {
+      "id": "entry",
+      "name": "entry",
+      "next": [
+        {
+          "condition": "true",
+          "node": "choice-professional"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-p0tzjd",
+        "builtin/resetContext {}",
+        "builtin/appendContext {\"contexts\":\"professional,global\",\"ttl\":\"10\"}"
+      ],
+      "onReceive": null
+    },
+    {
+      "id": "skill-f66ec6",
+      "type": "skill-call",
+      "skill": "choice",
+      "name": "choice-professional",
+      "flow": "skills/choice-f66ec6.flow.json",
+      "next": [
+        {
+          "condition": "temp['skill-choice-ret'] == \"product\"",
+          "node": "product"
+        },
+        {
+          "condition": "temp['skill-choice-ret'] == \"contact\"",
+          "node": "product-copy"
+        },
+        {
+          "caption": "On failure",
+          "condition": "true",
+          "node": "catch"
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "1c87581f34",
+      "name": "catch",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-a507"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-2W-stc"
+      ],
+      "onReceive": null
+    },
+    {
+      "id": "7d0538d654",
+      "name": "product",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-a507"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-51cqP3"
+      ],
+      "onReceive": null
+    },
+    {
+      "id": "4c6455951f",
+      "name": "product-copy",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-a507"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-BOpuAM"
+      ],
+      "onReceive": null
+    },
+    {
+      "id": "46adcb1be9",
+      "name": "node-a507",
+      "next": [
+        {
+          "condition": "true",
+          "node": "choice-professional"
+        }
+      ],
+      "onEnter": [
+        "increment_question_pro {}"
+      ],
+      "onReceive": null
+    }
+  ]
+}

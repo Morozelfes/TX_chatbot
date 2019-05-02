@@ -1,0 +1,14 @@
+{
+  "name": "hobby",
+  "utterances": [
+    "what do you like to do ?",
+    "what do you like in life",
+    "your hobby",
+    "What do you like ?",
+    "What is your hobby ?"
+  ],
+  "slots": [],
+  "contexts": [
+    "hobby"
+  ]
+}

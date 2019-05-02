@@ -1,0 +1,22 @@
+[
+  {
+    "id": "builtin_single-choice-t7W08Z",
+    "formData": {
+      "text$en": "What  would like to know ?",
+      "choices$en": [
+        {
+          "title": "What product do you sold ?",
+          "value": "product"
+        },
+        {
+          "title": "What is your email ?",
+          "value": "contact"
+        }
+      ],
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-04-17T16:25:29.792Z",
+    "modifiedOn": "2019-04-17T16:25:29.792Z"
+  }
+]

@@ -1,0 +1,4 @@
+{
+  "$schema": "../../../assets/modules/qna/config.schema.json",
+  "qnaCategories": "global,memory,professional,contexts,product,contact,singer,hobby,sport,humanity,music"
+}

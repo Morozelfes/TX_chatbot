@@ -1,0 +1,54 @@
+{
+  "sensitive": false,
+  "fuzzy": true,
+  "name": "bad  valence",
+  "type": "list",
+  "occurences": [
+    {
+      "name": "hate",
+      "synonyms": [
+        "hates"
+      ]
+    },
+    {
+      "name": "sick",
+      "synonyms": []
+    },
+    {
+      "name": "worst",
+      "synonyms": []
+    },
+    {
+      "name": "fuck",
+      "synonyms": []
+    },
+    {
+      "name": "hurting",
+      "synonyms": []
+    },
+    {
+      "name": "hurt",
+      "synonyms": []
+    },
+    {
+      "name": "sucks",
+      "synonyms": []
+    },
+    {
+      "name": "tired",
+      "synonyms": []
+    },
+    {
+      "name": ":'(",
+      "synonyms": []
+    },
+    {
+      "name": "need",
+      "synonyms": []
+    },
+    {
+      "name": "sad",
+      "synonyms": []
+    }
+  ]
+}

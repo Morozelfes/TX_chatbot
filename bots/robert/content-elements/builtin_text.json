@@ -1,0 +1,112 @@
+[
+  {
+    "id": "builtin_text-p0tzjd",
+    "formData": {
+      "text$en": "Hello ! How I can help you ?",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-04-17T16:09:27.126Z",
+    "modifiedOn": "2019-04-17T16:09:27.126Z"
+  },
+  {
+    "id": "builtin_text-2W-stc",
+    "formData": {
+      "text$en": "Ask me something thats included in the choices. Let's try again.",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-04-17T16:37:03.406Z",
+    "modifiedOn": "2019-04-17T16:37:03.406Z"
+  },
+  {
+    "id": "builtin_text-51cqP3",
+    "formData": {
+      "text$en": "We have the best wheels on the market !! Huge, medium and small wheels, there are for all  tastes !!!",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-04-17T18:09:10.579Z",
+    "modifiedOn": "2019-04-17T18:09:10.579Z"
+  },
+  {
+    "id": "builtin_text-BOpuAM",
+    "formData": {
+      "text$en": "You can contact us by email : fakemail@fake.yahoo",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-04-17T18:12:02.907Z",
+    "modifiedOn": "2019-04-17T18:12:02.907Z"
+  },
+  {
+    "id": "builtin_text-7zBS14",
+    "formData": {
+      "text$en": "Ok stop ! I fed up with your questions about the company. Nobody care about my life....",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-04-17T20:29:01.321Z",
+    "modifiedOn": "2019-04-17T20:46:50.891Z"
+  },
+  {
+    "id": "builtin_text-fx4INx",
+    "formData": {
+      "text$en": "....",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-04-17T20:47:10.598Z",
+    "modifiedOn": "2019-04-17T20:47:10.598Z"
+  },
+  {
+    "id": "builtin_text-IeFAvk",
+    "formData": {
+      "text$en": "thank you for asking me on my personal life",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-04-17T21:42:37.750Z",
+    "modifiedOn": "2019-04-17T21:42:37.750Z"
+  },
+  {
+    "id": "builtin_text-aRuhxG",
+    "formData": {
+      "text$en": "And yes, I like music, sport and asking me in the future of humanity",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-04-17T21:43:31.077Z",
+    "modifiedOn": "2019-04-17T21:43:31.077Z"
+  },
+  {
+    "id": "builtin_text-m-hws3",
+    "formData": {
+      "text$en": "Humanity is going to destroy itself !!",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-04-17T21:49:04.929Z",
+    "modifiedOn": "2019-04-17T21:49:04.929Z"
+  },
+  {
+    "id": "builtin_text-PlMvGs",
+    "formData": {
+      "text$en": "I love Billy Joel ! And I would like to play saxophone",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-04-17T21:49:41.872Z",
+    "modifiedOn": "2019-04-17T21:49:41.872Z"
+  },
+  {
+    "id": "builtin_text-PauhXA",
+    "formData": {
+      "text$en": "I fascinate about the  chinese art martial",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-04-17T21:50:15.065Z",
+    "modifiedOn": "2019-04-17T21:50:15.065Z"
+  }
+]

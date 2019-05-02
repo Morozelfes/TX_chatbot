@@ -1,0 +1,11 @@
+{
+  "$schema": "../../../assets/modules/nlu/config.schema.json",
+  "confidenceTreshold": 0.7,
+  "ducklingURL": "https://duckling.botpress.io",
+  "ducklingEnabled": true,
+  "debugModeEnabled": true,
+  "autoTrainInterval": "30s",
+  "preloadModels": false,
+  "languageModel": "en",
+  "fastTextOverrides": {}
+}

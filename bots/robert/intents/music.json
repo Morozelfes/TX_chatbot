@@ -1,0 +1,14 @@
+{
+  "name": "music",
+  "utterances": [
+    "music ?",
+    "do you like music ?",
+    "what kind of music do you like ?",
+    "do you practice an instrument ?",
+    "what music do you hear ?"
+  ],
+  "slots": [],
+  "contexts": [
+    "music"
+  ]
+}

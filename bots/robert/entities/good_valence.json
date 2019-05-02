@@ -1,0 +1,48 @@
+{
+  "sensitive": false,
+  "fuzzy": true,
+  "name": "good valence",
+  "type": "list",
+  "occurences": [
+    {
+      "name": "thank",
+      "synonyms": [
+        "thanks"
+      ]
+    },
+    {
+      "name": "=)",
+      "synonyms": []
+    },
+    {
+      "name": "<3",
+      "synonyms": [
+        "love"
+      ]
+    },
+    {
+      "name": "good",
+      "synonyms": []
+    },
+    {
+      "name": "amazing",
+      "synonyms": []
+    },
+    {
+      "name": "happy",
+      "synonyms": []
+    },
+    {
+      "name": "great",
+      "synonyms": []
+    },
+    {
+      "name": "birthday",
+      "synonyms": []
+    },
+    {
+      "name": "beautiful",
+      "synonyms": []
+    }
+  ]
+}
