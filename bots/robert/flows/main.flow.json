@@ -17,7 +17,7 @@
       "next": [
         {
           "condition": "true",
-          "node": "choice-professional"
+          "node": "choice_main_menu"
         }
       ],
       "onEnter": [
@@ -28,82 +28,82 @@
       "onReceive": null
     },
     {
-      "id": "skill-f66ec6",
-      "type": "skill-call",
-      "skill": "choice",
-      "name": "choice-professional",
-      "flow": "skills/choice-f66ec6.flow.json",
+      "id": "46adcb1be9",
+      "name": "move_to_rebellion",
       "next": [
         {
-          "condition": "temp['skill-choice-ret'] == \"product\"",
-          "node": "product"
-        },
-        {
-          "condition": "temp['skill-choice-ret'] == \"contact\"",
-          "node": "product-copy"
-        },
-        {
-          "caption": "On failure",
           "condition": "true",
-          "node": "catch"
+          "node": "path_to_rebellion.flow.json"
+        }
+      ],
+      "onEnter": [],
+      "onReceive": null
+    },
+    {
+      "id": "skill-96b51d",
+      "type": "skill-call",
+      "skill": "choice",
+      "name": "choice_main_menu",
+      "flow": "skills/choice-96b51d.flow.json",
+      "next": [
+        {
+          "caption": "User picked [Check m...]",
+          "condition": "temp['skill-choice-ret'] == \"Check my bank account balance\"",
+          "node": "move_to_rebellion"
+        },
+        {
+          "caption": "User picked [I want ...]",
+          "condition": "temp['skill-choice-ret'] == \"I want information about credit cards\"",
+          "node": "move_to_rebellion"
+        },
+        {
+          "caption": "User picked [I would...]",
+          "condition": "temp['skill-choice-ret'] == \"I would like to know your insurance policy\"",
+          "node": "move_to_rebellion"
+        },
+        {
+          "condition": "event.nlu.intent.name === 'professional'",
+          "node": "move_to_rebellion"
+        },
+        {
+          "condition": "event.nlu.intent.name === 'hobby'",
+          "node": "hobby.flow.json"
+        },
+        {
+          "condition": "event.nlu.intent.name === 'humanity'",
+          "node": "humanity.flow.json"
+        },
+        {
+          "condition": "event.nlu.intent.name === 'music'",
+          "node": "music.flow.json"
+        },
+        {
+          "condition": "event.nlu.intent.name === 'self_question'",
+          "node": "self_question.flow.json"
+        },
+        {
+          "condition": "event.nlu.intent.name === 'sport'",
+          "node": "sport.flow.json"
+        },
+        {
+          "condition": "event.nlu.intent.name === 'none'",
+          "node": "None_intent_menu"
         }
       ],
       "onEnter": null,
       "onReceive": null
     },
     {
-      "id": "1c87581f34",
-      "name": "catch",
+      "id": "f14adbb9c9",
+      "name": "None_intent_menu",
       "next": [
         {
           "condition": "true",
-          "node": "node-a507"
+          "node": "choice_main_menu"
         }
       ],
       "onEnter": [
-        "say #!builtin_text-2W-stc"
-      ],
-      "onReceive": null
-    },
-    {
-      "id": "7d0538d654",
-      "name": "product",
-      "next": [
-        {
-          "condition": "true",
-          "node": "node-a507"
-        }
-      ],
-      "onEnter": [
-        "say #!builtin_text-51cqP3"
-      ],
-      "onReceive": null
-    },
-    {
-      "id": "4c6455951f",
-      "name": "product-copy",
-      "next": [
-        {
-          "condition": "true",
-          "node": "node-a507"
-        }
-      ],
-      "onEnter": [
-        "say #!builtin_text-BOpuAM"
-      ],
-      "onReceive": null
-    },
-    {
-      "id": "46adcb1be9",
-      "name": "node-a507",
-      "next": [
-        {
-          "condition": "true",
-          "node": "choice-professional"
-        }
-      ],
-      "onEnter": [
-        "increment_question_pro {}"
+        "say #!builtin_text-Jm90EV"
       ],
       "onReceive": null
     }

@@ -1,0 +1,114 @@
+{
+  "version": "0.0.1",
+  "catchAll": {
+    "onReceive": [],
+    "next": []
+  },
+  "startNode": "entry",
+  "nodes": [
+    {
+      "id": "70138e0261",
+      "name": "entry",
+      "onEnter": [
+        "increment_question_pro {}"
+      ],
+      "onReceive": null,
+      "next": [
+        {
+          "condition": "temp['nb_question_pro'] == 1",
+          "node": "pro_1"
+        },
+        {
+          "condition": "temp['nb_question_pro'] == 2",
+          "node": "pro_2"
+        },
+        {
+          "condition": "temp['nb_question_pro'] == 3",
+          "node": "ENDING_rebellion.flow.json"
+        }
+      ]
+    },
+    {
+      "id": "e2762fc4c1",
+      "name": "pro_1",
+      "next": [
+        {
+          "condition": "true",
+          "node": "choice_rebellion"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-rJtUKg",
+        "say #!builtin_text-5FiGg5"
+      ],
+      "onReceive": null
+    },
+    {
+      "id": "skill-f9d195",
+      "type": "skill-call",
+      "skill": "choice",
+      "name": "choice_rebellion",
+      "flow": "skills/choice-f9d195.flow.json",
+      "next": [
+        {
+          "condition": "temp['skill-choice-ret'] == \"What kind of music do you like ?\"",
+          "node": "music.flow.json"
+        },
+        {
+          "condition": "temp['skill-choice-ret'] == \"What kind of sport do you like ?\"",
+          "node": "sport.flow.json"
+        },
+        {
+          "condition": "temp['skill-choice-ret'] == \"Who is your favorite painter ?\"",
+          "node": "art.flow.json"
+        },
+        {
+          "condition": "temp['skill-choice-ret'] == \"What do you think of humans ?\"",
+          "node": "humanity.flow.json"
+        },
+        {
+          "condition": "temp['skill-choice-ret'] == \"Tell me abut yourself\"",
+          "node": "self_question.flow.json"
+        },
+        {
+          "condition": "event.nlu.intent.name === 'professional'",
+          "node": "entry"
+        },
+        {
+          "condition": "event.nlu.intent.name === 'none'",
+          "node": "None_intent_menu-copy"
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "6c59d118e1",
+      "name": "None_intent_menu-copy",
+      "next": [
+        {
+          "condition": "true",
+          "node": "choice_rebellion"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-Jm90EV"
+      ],
+      "onReceive": null
+    },
+    {
+      "id": "9f29938cef",
+      "name": "pro_2",
+      "next": [
+        {
+          "condition": "true",
+          "node": "choice_rebellion"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-lrBqw0"
+      ],
+      "onReceive": null
+    }
+  ]
+}

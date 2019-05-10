@@ -1,0 +1,16 @@
+{
+  "version": "0.0.1",
+  "catchAll": {},
+  "startNode": "entry",
+  "nodes": [
+    {
+      "id": "5c3e864d97",
+      "name": "entry",
+      "onEnter": [
+        "say #!builtin_text-3ZeWI4"
+      ],
+      "onReceive": null,
+      "next": []
+    }
+  ]
+}

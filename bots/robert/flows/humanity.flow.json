@@ -1,0 +1,16 @@
+{
+  "version": "0.0.1",
+  "catchAll": {},
+  "startNode": "entry",
+  "nodes": [
+    {
+      "id": "e0b112b4df",
+      "name": "entry",
+      "onEnter": [
+        "say #!builtin_text-ifGiP5"
+      ],
+      "onReceive": null,
+      "next": []
+    }
+  ]
+}

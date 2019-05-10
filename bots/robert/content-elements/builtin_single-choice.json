@@ -18,5 +18,85 @@
     "createdBy": "admin",
     "createdOn": "2019-04-17T16:25:29.792Z",
     "modifiedOn": "2019-04-17T16:25:29.792Z"
+  },
+  {
+    "id": "builtin_single-choice-ZN4WzA",
+    "formData": {
+      "text$en": "You can pick a question here or ask me anything about our bank services.",
+      "choices$en": [
+        {
+          "title": "Account balance",
+          "value": "Check my bank account balance"
+        },
+        {
+          "title": "Credit card information",
+          "value": "I want information about credit cards"
+        },
+        {
+          "title": "Insurance policy",
+          "value": "I would like to know your insurance policy"
+        }
+      ],
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-05-10T12:32:06.336Z",
+    "modifiedOn": "2019-05-10T12:32:06.336Z"
+  },
+  {
+    "id": "builtin_single-choice-IydEAd",
+    "formData": {
+      "text$en": "You can pick a question here or ask me anything about our bank services.",
+      "choices$en": [
+        {
+          "title": "Account balance",
+          "value": "Check my bank account balance"
+        },
+        {
+          "title": "Credit card information",
+          "value": "I want information about credit cards"
+        },
+        {
+          "title": "Insurance policy",
+          "value": "I would like to know your insurance policy"
+        }
+      ],
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-05-10T12:32:10.260Z",
+    "modifiedOn": "2019-05-10T12:32:10.260Z"
+  },
+  {
+    "id": "builtin_single-choice-dT24hT",
+    "formData": {
+      "text$en": "Maybe we can talk about something different ?",
+      "choices$en": [
+        {
+          "title": "Music",
+          "value": "What kind of music do you like ?"
+        },
+        {
+          "title": "Sport",
+          "value": "What kind of sport do you like ?"
+        },
+        {
+          "title": "Art",
+          "value": "Who is your favorite painter ?"
+        },
+        {
+          "title": "Humanity",
+          "value": "What do you think of humans ?"
+        },
+        {
+          "title": "Meeee !!!",
+          "value": "Tell me abut yourself"
+        }
+      ],
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-05-10T13:13:38.468Z",
+    "modifiedOn": "2019-05-10T13:13:38.468Z"
   }
 ]

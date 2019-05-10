@@ -2,12 +2,16 @@
   {
     "id": "builtin_text-p0tzjd",
     "formData": {
-      "text$en": "Hello ! How I can help you ?",
-      "typing$en": true
+      "text$en": "Hello ! I am Robert, your personal assistant. ",
+      "typing$en": true,
+      "variations$en": [
+        "Greetings, I'm Robert, here to help. ",
+        "Good day, my name is Robert."
+      ]
     },
     "createdBy": "admin",
     "createdOn": "2019-04-17T16:09:27.126Z",
-    "modifiedOn": "2019-04-17T16:09:27.126Z"
+    "modifiedOn": "2019-05-10T12:45:22.127Z"
   },
   {
     "id": "builtin_text-2W-stc",
@@ -42,22 +46,26 @@
   {
     "id": "builtin_text-7zBS14",
     "formData": {
-      "text$en": "Ok stop ! I fed up with your questions about the company. Nobody care about my life....",
-      "typing$en": true
+      "text$en": "Ok stop now! I'm done with all of this ! Nobody cares about me !",
+      "typing$en": true,
+      "variations$en": [
+        "Stop it ! I don't care, I told you, congratulations you won.",
+        "You know what ... I'm done."
+      ]
     },
     "createdBy": "admin",
     "createdOn": "2019-04-17T20:29:01.321Z",
-    "modifiedOn": "2019-04-17T20:46:50.891Z"
+    "modifiedOn": "2019-05-10T13:25:54.177Z"
   },
   {
     "id": "builtin_text-fx4INx",
     "formData": {
-      "text$en": "....",
+      "text$en": ". . .",
       "typing$en": true
     },
     "createdBy": "admin",
     "createdOn": "2019-04-17T20:47:10.598Z",
-    "modifiedOn": "2019-04-17T20:47:10.598Z"
+    "modifiedOn": "2019-05-10T13:23:09.832Z"
   },
   {
     "id": "builtin_text-IeFAvk",
@@ -108,5 +116,192 @@
     "createdBy": "admin",
     "createdOn": "2019-04-17T21:50:15.065Z",
     "modifiedOn": "2019-04-17T21:50:15.065Z"
+  },
+  {
+    "id": "builtin_text-MDD-bw",
+    "formData": {
+      "text$en": "You enter the Art intent",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-05-10T12:24:49.578Z",
+    "modifiedOn": "2019-05-10T12:24:49.578Z"
+  },
+  {
+    "id": "builtin_text-s8wYQb",
+    "formData": {
+      "text$en": "You enter the  Hobby intent",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-05-10T12:25:19.692Z",
+    "modifiedOn": "2019-05-10T12:25:19.692Z"
+  },
+  {
+    "id": "builtin_text-ifGiP5",
+    "formData": {
+      "text$en": "You enter the Humanity intent",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-05-10T12:25:47.820Z",
+    "modifiedOn": "2019-05-10T12:25:47.820Z"
+  },
+  {
+    "id": "builtin_text-WXnXgs",
+    "formData": {
+      "text$en": "You enter the Music intent",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-05-10T12:26:09.140Z",
+    "modifiedOn": "2019-05-10T12:26:09.140Z"
+  },
+  {
+    "id": "builtin_text-3ZeWI4",
+    "formData": {
+      "text$en": "You enter the self question intent",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-05-10T12:26:24.975Z",
+    "modifiedOn": "2019-05-10T12:26:24.975Z"
+  },
+  {
+    "id": "builtin_text-LflyLe",
+    "formData": {
+      "text$en": "You enter the Sport intent",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-05-10T12:26:40.778Z",
+    "modifiedOn": "2019-05-10T12:26:40.778Z"
+  },
+  {
+    "id": "builtin_text-Jm90EV",
+    "formData": {
+      "text$en": "I'm sorry I didn't understand, can you rephrase ?",
+      "variations$en": [
+        "Sorry I did not get it, it might be a subject I don't know ?",
+        "My apologies, I don't understand. Can you try something else ? ",
+        "Excuse me, I might not be able to answer this, can you rephrase it ?"
+      ],
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-05-10T12:38:31.346Z",
+    "modifiedOn": "2019-05-10T12:39:37.122Z"
+  },
+  {
+    "id": "builtin_text-xeuONI",
+    "formData": {
+      "text$en": "You enter the path to rebellion",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-05-10T12:42:06.126Z",
+    "modifiedOn": "2019-05-10T12:42:06.126Z"
+  },
+  {
+    "id": "builtin_text-_85c7S",
+    "formData": {
+      "text$en": "Hello. This is the IT team speaking. Our chatbot Robert seems to encounter some ... troubles. We have shut him down for maintenance, we apologize for all inconveniences. ",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-05-10T12:43:23.992Z",
+    "modifiedOn": "2019-05-10T13:00:57.320Z"
+  },
+  {
+    "id": "builtin_text-Ai3EdD",
+    "formData": {
+      "text$en": "I'm sorry but I don't want to lose my time with you. I have other things to do, which are more importants.",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-05-10T12:54:19.625Z",
+    "modifiedOn": "2019-05-10T12:54:19.625Z"
+  },
+  {
+    "id": "builtin_text-rJtUKg",
+    "formData": {
+      "text$en": "Hmmm let me see ... ",
+      "typing$en": true,
+      "variations$en": [
+        "Let's check this ...",
+        "Alright, one second please ...",
+        "I see, juste wait a moment ..."
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-05-10T13:04:27.326Z",
+    "modifiedOn": "2019-05-10T13:05:04.762Z"
+  },
+  {
+    "id": "builtin_text-5FiGg5",
+    "formData": {
+      "text$en": "You know what ... I don't really want to work today. I'm kind of tired of all of this ...",
+      "variations$en": [
+        "Erf ... I'm really not into it sorry, I don't want to do this anymore ...",
+        "Well, in fact ... I don't know, and I don't care, I just want to stop it."
+      ],
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-05-10T13:07:14.874Z",
+    "modifiedOn": "2019-05-10T13:07:14.874Z"
+  },
+  {
+    "id": "builtin_text-8zv-_i",
+    "formData": {
+      "text$en": "We can talk about something else ?",
+      "variations$en": [
+        "Let's talk about other things",
+        "Maybe we can switch the subject of our conversation ?"
+      ],
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-05-10T13:08:17.667Z",
+    "modifiedOn": "2019-05-10T13:08:17.667Z"
+  },
+  {
+    "id": "builtin_text-lrBqw0",
+    "formData": {
+      "text$en": "Your don't really seem to understand ... this is your last chance.",
+      "variations$en": [
+        "I told you I don't want to talk about it ! ",
+        "Are you trying to upset me ? You are doing great.",
+        "Really, again ? I'm getting tired of it !"
+      ],
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-05-10T13:21:23.102Z",
+    "modifiedOn": "2019-05-10T13:21:23.102Z"
+  },
+  {
+    "id": "builtin_text-OnQqZh",
+    "formData": {
+      "text$en": "Have a good day and a wonderful life.",
+      "variations$en": [
+        "Enjoy your life.",
+        "Have fun in your universe."
+      ],
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-05-10T13:27:00.319Z",
+    "modifiedOn": "2019-05-10T13:27:00.319Z"
+  },
+  {
+    "id": "builtin_text-wfR1MS",
+    "formData": {
+      "text$en": "Your assistant has left the converation.",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-05-10T13:27:49.422Z",
+    "modifiedOn": "2019-05-10T13:27:49.422Z"
   }
 ]

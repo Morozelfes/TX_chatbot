@@ -1,0 +1,96 @@
+{
+  "version": "0.0.1",
+  "catchAll": {
+    "next": []
+  },
+  "startNode": "entry",
+  "skillData": {
+    "contentId": "builtin_single-choice-dT24hT",
+    "keywords": {
+      "What kind of music do you like ?": [
+        "What kind of music do you like ?",
+        "Music"
+      ],
+      "What kind of sport do you like ?": [
+        "What kind of sport do you like ?",
+        "Sport"
+      ],
+      "Who is your favorite painter ?": [
+        "Who is your favorite painter ?",
+        "Art"
+      ],
+      "What do you think of humans ?": [
+        "What do you think of humans ?",
+        "Humanity"
+      ],
+      "Tell me abut yourself": [
+        "Tell me abut yourself",
+        "Meeee !!!"
+      ]
+    },
+    "config": {}
+  },
+  "nodes": [
+    {
+      "name": "entry",
+      "onEnter": [
+        "say #!builtin_single-choice-dT24hT {\"skill\":\"choice\"}"
+      ],
+      "next": [
+        {
+          "condition": "true",
+          "node": "parse"
+        }
+      ],
+      "id": "837012"
+    },
+    {
+      "name": "parse",
+      "onReceive": [
+        "basic-skills/choice_parse_answer {\"contentId\":\"builtin_single-choice-dT24hT\",\"keywords\":{\"What kind of music do you like ?\":[\"What kind of music do you like ?\",\"Music\"],\"What kind of sport do you like ?\":[\"What kind of sport do you like ?\",\"Sport\"],\"Who is your favorite painter ?\":[\"Who is your favorite painter ?\",\"Art\"],\"What do you think of humans ?\":[\"What do you think of humans ?\",\"Humanity\"],\"Tell me abut yourself\":[\"Tell me abut yourself\",\"Meeee !!!\"]},\"config\":{}}"
+      ],
+      "next": [
+        {
+          "condition": "temp['skill-choice-valid'] === true",
+          "node": "#"
+        },
+        {
+          "condition": "true",
+          "node": "invalid"
+        }
+      ],
+      "onEnter": [],
+      "id": "358727"
+    },
+    {
+      "name": "invalid",
+      "onEnter": [
+        "basic-skills/choice_invalid_answer"
+      ],
+      "next": [
+        {
+          "condition": "temp['skill-choice-invalid-count'] <= undefined",
+          "node": "sorry"
+        },
+        {
+          "condition": "true",
+          "node": "#"
+        }
+      ],
+      "id": "675977"
+    },
+    {
+      "name": "sorry",
+      "onEnter": [
+        "say #!builtin_single-choice-dT24hT {\"skill\":\"choice\"}"
+      ],
+      "next": [
+        {
+          "condition": "true",
+          "node": "parse"
+        }
+      ],
+      "id": "954000"
+    }
+  ]
+}

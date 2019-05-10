@@ -1,6 +1,30 @@
 {
   "name": "professional",
-  "utterances": [],
+  "utterances": [
+    "How much savings do I have ?",
+    "Can you give me my account balance ?",
+    "I want to know my balance",
+    "Check my money",
+    "How much money do I have on my account ?",
+    "What kind of insurance to you propose ?",
+    "What are your insurance policy ?",
+    "I would like so subscribe to an insurance",
+    "I want to send money to someone",
+    "Can I make a money transfer online ?",
+    "My credit card has been stolen",
+    "I forgot my password ",
+    "I have lost my credit card",
+    "I want to change my credit card",
+    "I would like information about your offers",
+    "How can I get my RIB key ?",
+    "How can I get my IBAN ?",
+    "I want to get my bank account details",
+    "I want to get a RIB key",
+    "I would like to transfer money",
+    "I would like to make a money transfer",
+    "I want to check my balance",
+    "I would like to open a bank account"
+  ],
   "slots": [],
   "contexts": [
     "professional"
