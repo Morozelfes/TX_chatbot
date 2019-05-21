@@ -1,13 +1,13 @@
 {
   "name": "none",
-  "filename": "none.json",
-  "contexts": [
-    "global"
-  ],
-  "entities": [],
   "utterances": [
+    "blablabla",
     "!&#^&*$^*(%",
     "1234567",
     "abcdefg"
-  ]
+  ],
+  "contexts": [
+    "global"
+  ],
+  "slots": []
 }

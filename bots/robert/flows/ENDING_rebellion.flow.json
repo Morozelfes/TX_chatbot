@@ -9,13 +9,18 @@
       "onEnter": [
         "say #!builtin_text-fx4INx",
         "say #!builtin_text-7zBS14",
-        "builtin/resetContext {}",
-        "builtin/appendContext {\"contexts\":\"global,memory,singer,hobby,sport,humanity,music\",\"ttl\":\"10\"}",
         "say #!builtin_text-OnQqZh",
-        "say #!builtin_text-wfR1MS"
+        "say #!builtin_text-wfR1MS",
+        "builtin/resetContext {}",
+        "builtin/appendContext {\"contexts\":\"global,memory,singer,hobby,sport,humanity,music\",\"ttl\":\"10\"}"
       ],
       "onReceive": [],
-      "next": []
+      "next": [
+        {
+          "condition": "true",
+          "node": "END"
+        }
+      ]
     }
   ]
 }

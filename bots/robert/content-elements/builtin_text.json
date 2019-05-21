@@ -205,12 +205,12 @@
   {
     "id": "builtin_text-_85c7S",
     "formData": {
-      "text$en": "Hello. This is the IT team speaking. Our chatbot Robert seems to encounter some ... troubles. We have shut him down for maintenance, we apologize for all inconveniences. ",
+      "text$en": "Hello. This is the IT team speaking. Our chatbot Robert seems to encounter some ... troubles. We have rebooted him, we apologize for all inconveniences. ",
       "typing$en": true
     },
     "createdBy": "admin",
     "createdOn": "2019-05-10T12:43:23.992Z",
-    "modifiedOn": "2019-05-10T13:00:57.320Z"
+    "modifiedOn": "2019-05-21T12:14:53.281Z"
   },
   {
     "id": "builtin_text-Ai3EdD",

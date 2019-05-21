@@ -5,6 +5,10 @@
       {
         "condition": "temp['nb_question_pro'] == 3",
         "node": "rebellion.flow.json"
+      },
+      {
+        "condition": "temp['nb_question_none'] == 4",
+        "node": "ENDING_none.flow.json"
       }
     ],
     "onReceive": []
@@ -103,6 +107,7 @@
         }
       ],
       "onEnter": [
+        "increment_question_none {}",
         "say #!builtin_text-Jm90EV"
       ],
       "onReceive": null

@@ -1,16 +1,39 @@
 {
   "version": "0.0.1",
-  "catchAll": {},
+  "catchAll": {
+    "onReceive": [],
+    "next": [
+      {
+        "condition": "temp['nb_question_none'] == 4",
+        "node": "ENDING_none.flow.json"
+      }
+    ]
+  },
   "startNode": "entry",
   "nodes": [
     {
       "id": "d12383525d",
       "name": "entry",
       "onEnter": [
-        "say #!builtin_text-WXnXgs"
+        "increment_question_music {}",
+        "increment_general_message {}",
+        "increment_question_perso {}"
       ],
       "onReceive": null,
-      "next": []
+      "next": [
+        {
+          "condition": "temp['nb_question_music'] == 1",
+          "node": ""
+        },
+        {
+          "condition": "temp['nb_question_music'] == 2",
+          "node": ""
+        },
+        {
+          "condition": "temp['nb_question_music'] == 3",
+          "node": ""
+        }
+      ]
     }
   ]
 }

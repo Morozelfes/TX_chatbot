@@ -1,8 +1,13 @@
 {
   "version": "0.0.1",
   "catchAll": {
-    "onReceive": [],
-    "next": []
+    "next": [
+      {
+        "condition": "temp['nb_question_none'] == 4",
+        "node": "ENDING_none.flow.json"
+      }
+    ],
+    "onReceive": []
   },
   "startNode": "entry",
   "nodes": [
@@ -10,7 +15,8 @@
       "id": "70138e0261",
       "name": "entry",
       "onEnter": [
-        "increment_question_pro {}"
+        "increment_question_pro {}",
+        "increment_general_message {}"
       ],
       "onReceive": null,
       "next": [
@@ -92,6 +98,7 @@
         }
       ],
       "onEnter": [
+        "increment_question_none {}",
         "say #!builtin_text-Jm90EV"
       ],
       "onReceive": null
