@@ -10,17 +10,10 @@
         "say #!builtin_text-fx4INx",
         "say #!builtin_text-7zBS14",
         "say #!builtin_text-OnQqZh",
-        "say #!builtin_text-wfR1MS",
-        "builtin/resetContext {}",
-        "builtin/appendContext {\"contexts\":\"global,memory,singer,hobby,sport,humanity,music\",\"ttl\":\"10\"}"
+        "say #!builtin_text-wfR1MS"
       ],
       "onReceive": [],
-      "next": [
-        {
-          "condition": "true",
-          "node": "END"
-        }
-      ]
+      "next": []
     }
   ]
 }

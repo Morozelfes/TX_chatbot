@@ -1,0 +1,96 @@
+{
+  "version": "0.0.1",
+  "catchAll": {
+    "next": []
+  },
+  "startNode": "entry",
+  "skillData": {
+    "contentId": "builtin_single-choice-aF3gD2",
+    "keywords": {
+      "Hobby": [
+        "Hobby",
+        "Keep talking about hobby"
+      ],
+      "Humanity": [
+        "Humanity",
+        "What about humanity ?"
+      ],
+      "Music": [
+        "Music",
+        "And music ?"
+      ],
+      "Tell me about yourself": [
+        "Tell me about yourself",
+        "More about me"
+      ],
+      "Sport": [
+        "Sport",
+        "A bit of sport ?"
+      ]
+    },
+    "config": {}
+  },
+  "nodes": [
+    {
+      "name": "entry",
+      "onEnter": [
+        "say #!builtin_single-choice-aF3gD2 {\"skill\":\"choice\"}"
+      ],
+      "next": [
+        {
+          "condition": "true",
+          "node": "parse"
+        }
+      ],
+      "id": "802050"
+    },
+    {
+      "name": "parse",
+      "onReceive": [
+        "basic-skills/choice_parse_answer {\"contentId\":\"builtin_single-choice-aF3gD2\",\"keywords\":{\"Hobby\":[\"Hobby\",\"Keep talking about hobby\"],\"Humanity\":[\"Humanity\",\"What about humanity ?\"],\"Music\":[\"Music\",\"And music ?\"],\"Tell me about yourself\":[\"Tell me about yourself\",\"More about me\"],\"Sport\":[\"Sport\",\"A bit of sport ?\"]},\"config\":{}}"
+      ],
+      "next": [
+        {
+          "condition": "temp['skill-choice-valid'] === true",
+          "node": "#"
+        },
+        {
+          "condition": "true",
+          "node": "invalid"
+        }
+      ],
+      "onEnter": [],
+      "id": "584931"
+    },
+    {
+      "name": "invalid",
+      "onEnter": [
+        "basic-skills/choice_invalid_answer"
+      ],
+      "next": [
+        {
+          "condition": "temp['skill-choice-invalid-count'] <= undefined",
+          "node": "sorry"
+        },
+        {
+          "condition": "true",
+          "node": "#"
+        }
+      ],
+      "id": "833384"
+    },
+    {
+      "name": "sorry",
+      "onEnter": [
+        "say #!builtin_single-choice-aF3gD2 {\"skill\":\"choice\"}"
+      ],
+      "next": [
+        {
+          "condition": "true",
+          "node": "parse"
+        }
+      ],
+      "id": "042286"
+    }
+  ]
+}

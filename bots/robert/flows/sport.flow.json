@@ -1,16 +1,149 @@
 {
   "version": "0.0.1",
-  "catchAll": {},
-  "startNode": "entry",
+  "catchAll": {
+    "next": [
+      {
+        "condition": "session['nb_question_none'] == session['none_limit']",
+        "node": "ENDING_none.flow.json"
+      },
+      {
+        "condition": "session['nb_message'] == session['msg_limit']",
+        "node": "ENDING_shutdown.flow.json"
+      },
+      {
+        "condition": "session['nb_question_perso'] == session['perso_limit']",
+        "node": "ENDING_faith.flow.json"
+      }
+    ],
+    "onReceive": []
+  },
+  "startNode": "entry_sport",
   "nodes": [
     {
-      "id": "0c33d770c7",
-      "name": "entry",
+      "id": "bda941c053",
+      "name": "entry_sport",
       "onEnter": [
-        "say #!builtin_text-LflyLe"
+        "increment_question_sport {}",
+        "increment_general_message {}",
+        "increment_question_perso {}"
       ],
       "onReceive": null,
-      "next": []
+      "next": [
+        {
+          "condition": "session['nb_question_sport'] == 1",
+          "node": "first_sport"
+        },
+        {
+          "condition": "session['nb_question_sport'] == 2",
+          "node": "second_sport"
+        },
+        {
+          "condition": "session['nb_question_sport'] > 2",
+          "node": "third_sport"
+        }
+      ]
+    },
+    {
+      "id": "f638210a5a",
+      "name": "None_intent_menu",
+      "next": [
+        {
+          "condition": "true",
+          "node": "choice-sport"
+        }
+      ],
+      "onEnter": [
+        "increment_question_none {}",
+        "say #!builtin_text-Jm90EV"
+      ],
+      "onReceive": null
+    },
+    {
+      "id": "4cd33e6598",
+      "name": "first_sport",
+      "next": [
+        {
+          "condition": "true",
+          "node": "choice-sport"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-JwYXcV"
+      ],
+      "onReceive": null
+    },
+    {
+      "id": "7ecf88730f",
+      "name": "second_sport",
+      "next": [
+        {
+          "condition": "true",
+          "node": "choice-sport"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-mowQRb",
+        "say #!builtin_text-D_CQdO"
+      ],
+      "onReceive": null
+    },
+    {
+      "id": "a088b0d9ff",
+      "name": "third_sport",
+      "next": [
+        {
+          "condition": "true",
+          "node": "choice-sport"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text--6XcgR"
+      ],
+      "onReceive": null
+    },
+    {
+      "id": "skill-94e893",
+      "type": "skill-call",
+      "skill": "choice",
+      "name": "choice-sport",
+      "flow": "skills/choice-94e893.flow.json",
+      "next": [
+        {
+          "condition": "temp['skill-choice-ret'] == \"Hobby\"",
+          "node": "hobby.flow.json"
+        },
+        {
+          "condition": "temp['skill-choice-ret'] == \"Humanity\"",
+          "node": "humanity.flow.json"
+        },
+        {
+          "condition": "temp['skill-choice-ret'] == \"Music\"",
+          "node": "music.flow.json"
+        },
+        {
+          "condition": "temp['skill-choice-ret'] == \"Tell me about yourself\"",
+          "node": "self_question.flow.json"
+        },
+        {
+          "caption": "User picked [Sport]",
+          "condition": "temp['skill-choice-ret'] == \"Sport\"",
+          "node": "entry_sport"
+        },
+        {
+          "condition": "event.nlu.intent.name === 'none'",
+          "node": "None_intent_menu"
+        },
+        {
+          "condition": "event.nlu.intent.name === 'professional'",
+          "node": "path_to_rebellion.flow.json"
+        },
+        {
+          "condition": "true",
+          "node": "path_to_rebellion.flow.json"
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
     }
   ]
 }

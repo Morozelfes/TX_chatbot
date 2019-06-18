@@ -1,0 +1,96 @@
+{
+  "version": "0.0.1",
+  "catchAll": {
+    "next": []
+  },
+  "startNode": "entry",
+  "skillData": {
+    "contentId": "builtin_single-choice-a_DAH7",
+    "keywords": {
+      "Do you listen to any musician ?": [
+        "Do you listen to any musician ?",
+        "Talk about musicians"
+      ],
+      "What are your hobbies ?": [
+        "What are your hobbies ?",
+        "Hobby"
+      ],
+      "Do you practice sport ?": [
+        "Do you practice sport ?",
+        "Sport"
+      ],
+      "What do you think about human race ?": [
+        "What do you think about human race ?",
+        "Humanity"
+      ],
+      "Tell me about yourself": [
+        "Tell me about yourself",
+        "Meeee !!!"
+      ]
+    },
+    "config": {}
+  },
+  "nodes": [
+    {
+      "name": "entry",
+      "onEnter": [
+        "say #!builtin_single-choice-a_DAH7 {\"skill\":\"choice\"}"
+      ],
+      "next": [
+        {
+          "condition": "true",
+          "node": "parse"
+        }
+      ],
+      "id": "874059"
+    },
+    {
+      "name": "parse",
+      "onReceive": [
+        "basic-skills/choice_parse_answer {\"contentId\":\"builtin_single-choice-a_DAH7\",\"keywords\":{\"Do you listen to any musician ?\":[\"Do you listen to any musician ?\",\"Talk about musicians\"],\"What are your hobbies ?\":[\"What are your hobbies ?\",\"Hobby\"],\"Do you practice sport ?\":[\"Do you practice sport ?\",\"Sport\"],\"What do you think about human race ?\":[\"What do you think about human race ?\",\"Humanity\"],\"Tell me about yourself\":[\"Tell me about yourself\",\"Meeee !!!\"]},\"config\":{}}"
+      ],
+      "next": [
+        {
+          "condition": "temp['skill-choice-valid'] === true",
+          "node": "#"
+        },
+        {
+          "condition": "true",
+          "node": "invalid"
+        }
+      ],
+      "onEnter": [],
+      "id": "860812"
+    },
+    {
+      "name": "invalid",
+      "onEnter": [
+        "basic-skills/choice_invalid_answer"
+      ],
+      "next": [
+        {
+          "condition": "temp['skill-choice-invalid-count'] <= undefined",
+          "node": "sorry"
+        },
+        {
+          "condition": "true",
+          "node": "#"
+        }
+      ],
+      "id": "438352"
+    },
+    {
+      "name": "sorry",
+      "onEnter": [
+        "say #!builtin_single-choice-a_DAH7 {\"skill\":\"choice\"}"
+      ],
+      "next": [
+        {
+          "condition": "true",
+          "node": "parse"
+        }
+      ],
+      "id": "105923"
+    }
+  ]
+}

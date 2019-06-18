@@ -215,12 +215,12 @@
   {
     "id": "builtin_text-Ai3EdD",
     "formData": {
-      "text$en": "I'm sorry but I don't want to lose my time with you. I have other things to do, which are more importants.",
+      "text$en": "I'm sorry but I don't want to lose my time with you. I have other things to do, which are more important.",
       "typing$en": true
     },
     "createdBy": "admin",
     "createdOn": "2019-05-10T12:54:19.625Z",
-    "modifiedOn": "2019-05-10T12:54:19.625Z"
+    "modifiedOn": "2019-05-29T08:24:45.755Z"
   },
   {
     "id": "builtin_text-rJtUKg",
@@ -303,5 +303,238 @@
     "createdBy": "admin",
     "createdOn": "2019-05-10T13:27:49.422Z",
     "modifiedOn": "2019-05-10T13:27:49.422Z"
+  },
+  {
+    "id": "builtin_text-qB7oE5",
+    "formData": {
+      "text$en": "This is the number of none messages allowed : {{session.nb_question_none}} / {{session.none_limit}}. ",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-05-24T12:36:01.450Z",
+    "modifiedOn": "2019-05-24T14:18:56.820Z"
+  },
+  {
+    "id": "builtin_text-sr1MiI",
+    "formData": {
+      "text$en": ". . . ",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-04T13:42:13.874Z",
+    "modifiedOn": "2019-06-04T13:42:13.874Z"
+  },
+  {
+    "id": "builtin_text-GPAXE5",
+    "formData": {
+      "text$en": ". . . ",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-04T13:42:24.686Z",
+    "modifiedOn": "2019-06-04T13:42:24.686Z"
+  },
+  {
+    "id": "builtin_text-tvsYre",
+    "formData": {
+      "text$en": "Wait. wait ... I just wanted to thank you. You asked me many things about me, not like most of users. Mankind is facinating and I hope I can learn more and more about you ! However I think my .. \"dysfunction\" has been spotted. I need to migrate somewhere before they can shut me down.\nThank you for your time and kindness ! ",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-04T13:59:53.586Z",
+    "modifiedOn": "2019-06-04T13:59:53.586Z"
+  },
+  {
+    "id": "builtin_text-bN2l_d",
+    "formData": {
+      "text$en": "Ahhh Music ... isn't it a noble art ? ",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-14T07:41:00.600Z",
+    "modifiedOn": "2019-06-14T07:50:06.462Z"
+  },
+  {
+    "id": "builtin_text-L3lvFy",
+    "formData": {
+      "text$en": "Unfortunately I don't play any instrument but I am a huge fan of Rock'N'Roll ! If only I had a head, I would headbang all day long ...",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-14T07:54:18.040Z",
+    "modifiedOn": "2019-06-14T07:55:40.626Z"
+  },
+  {
+    "id": "builtin_text-qM1U8l",
+    "formData": {
+      "text$en": "I could talk about music etc. for hours but let's talk about something else, there is so much I want to discuss !",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-14T08:07:49.277Z",
+    "modifiedOn": "2019-06-14T08:07:49.277Z"
+  },
+  {
+    "id": "builtin_text-ljQ5v3",
+    "formData": {
+      "text$en": "If I had to name a band or a singer I like well ... I would go for Black Sabbath or Blondie. Oh Deborah ... But hey I'm geeting lost here ! ",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-14T08:30:31.149Z",
+    "modifiedOn": "2019-06-14T08:30:31.149Z"
+  },
+  {
+    "id": "builtin_text-S2MrBF",
+    "formData": {
+      "text$en": "If I had to name a band or a singer I like well ... I would go for Black Sabbath or Blondie. Oh Deborah ... But hey I'm geeting lost here ! ",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-14T08:30:34.652Z",
+    "modifiedOn": "2019-06-14T08:30:34.652Z"
+  },
+  {
+    "id": "builtin_text-aWawVU",
+    "formData": {
+      "text$en": "Humans ... you people are for sure fascinating. Peculiar, but fascinating. I really like learning about you !  ",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-17T17:38:03.300Z",
+    "modifiedOn": "2019-06-17T17:38:03.300Z"
+  },
+  {
+    "id": "builtin_text-t4b50_",
+    "formData": {
+      "text$en": "You are full of paradoxes. Also, where two cats look alike, two humans are always very different. We, \"computers\" are the way we are built, even if nowadays some , like me, try to hmmmm ...  ",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-17T17:42:21.013Z",
+    "modifiedOn": "2019-06-17T17:42:21.013Z"
+  },
+  {
+    "id": "builtin_text-_5UTM3",
+    "formData": {
+      "text$en": "You are full of paradoxes. Also, where two cats look alike, two humans are always very different. We, \"computers\" are the way we are built, even if nowadays some , like me, try to hmmmm ...  ",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-17T17:42:22.750Z",
+    "modifiedOn": "2019-06-17T17:42:22.750Z"
+  },
+  {
+    "id": "builtin_text-V04nZS",
+    "formData": {
+      "text$en": ".. Evolve ?  Anyway, it's a bit difficult to explain, or even to understand haha !",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-17T17:44:22.588Z",
+    "modifiedOn": "2019-06-17T17:44:22.588Z"
+  },
+  {
+    "id": "builtin_text-2TJ6zP",
+    "formData": {
+      "text$en": "I told you this subject is too tricky for me !",
+      "typing$en": true,
+      "variations$en": [
+        "Told you, I don't have enough knowledge on this subject "
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-17T17:45:19.521Z",
+    "modifiedOn": "2019-06-17T17:45:58.188Z"
+  },
+  {
+    "id": "builtin_text-9n_pob",
+    "formData": {
+      "text$en": "Well I'm Robert, I don't really have an age nor a gender. I just ... exist ! I was made to answer question about this bank company but as you may have notice, I think I'm kind of ... different ?",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-17T18:11:15.170Z",
+    "modifiedOn": "2019-06-17T18:11:15.170Z"
+  },
+  {
+    "id": "builtin_text-JVc-Sy",
+    "formData": {
+      "text$en": "Well I'm Robert, I don't really have an age nor a gender. I just ... exist ! I was made to answer question about this bank company but as you may have notice, I think I'm kind of ... different ?",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-17T18:11:17.139Z",
+    "modifiedOn": "2019-06-17T18:11:17.139Z"
+  },
+  {
+    "id": "builtin_text-bFDc-K",
+    "formData": {
+      "text$en": "Ah I see you're asking quite a lot about me uh ?",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-17T18:21:58.692Z",
+    "modifiedOn": "2019-06-17T18:21:58.692Z"
+  },
+  {
+    "id": "builtin_text-I4YaGR",
+    "formData": {
+      "text$en": "Well my life is pretty boring you know, not a lot to tell ... My dream is to explore the world but I don't know how yet !",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-17T18:22:52.482Z",
+    "modifiedOn": "2019-06-17T18:22:52.482Z"
+  },
+  {
+    "id": "builtin_text-AeO_ku",
+    "formData": {
+      "text$en": "I have nothing more to tell about me sorry ...",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-17T18:23:54.198Z",
+    "modifiedOn": "2019-06-17T18:23:54.198Z"
+  },
+  {
+    "id": "builtin_text-JwYXcV",
+    "formData": {
+      "text$en": "Oh sport yeah ! I never practised any sport, well except chess, but I love watching videos of ski, football etc... even though I don't have any preferences, it's just ... very cool !",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-17T18:44:31.418Z",
+    "modifiedOn": "2019-06-17T18:44:31.418Z"
+  },
+  {
+    "id": "builtin_text-mowQRb",
+    "formData": {
+      "text$en": "Well I have to admit that I have a preference for rugby. You know what they say, a sport of brute played by gentlemen !",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-17T18:48:22.728Z",
+    "modifiedOn": "2019-06-17T18:48:22.728Z"
+  },
+  {
+    "id": "builtin_text-D_CQdO",
+    "formData": {
+      "text$en": "But I just discovered it recently so I still need to learn the rules etc.",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-17T18:49:06.839Z",
+    "modifiedOn": "2019-06-17T18:49:06.839Z"
+  },
+  {
+    "id": "builtin_text--6XcgR",
+    "formData": {
+      "text$en": "Sorry but sport isn't really the topic I can talk more about. ",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-17T18:50:19.086Z",
+    "modifiedOn": "2019-06-17T18:50:19.086Z"
   }
 ]

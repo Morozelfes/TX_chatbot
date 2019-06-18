@@ -3,17 +3,21 @@
   "catchAll": {
     "next": [
       {
-        "condition": "temp['nb_question_pro'] == 3",
-        "node": "rebellion.flow.json"
+        "condition": "session['nb_message'] == session['msg_limit']",
+        "node": "ENDING_shutdown.flow.json"
       },
       {
-        "condition": "temp['nb_question_none'] == 4",
+        "condition": "session['nb_question_none'] == session['none_limit']",
         "node": "ENDING_none.flow.json"
+      },
+      {
+        "condition": "event.nlu.intent.name === 'music'",
+        "node": "music.flow.json"
       }
     ],
     "onReceive": []
   },
-  "startNode": "entry",
+  "startNode": "global_cpt",
   "nodes": [
     {
       "id": "entry",
@@ -25,9 +29,7 @@
         }
       ],
       "onEnter": [
-        "say #!builtin_text-p0tzjd",
-        "builtin/resetContext {}",
-        "builtin/appendContext {\"contexts\":\"professional,global\",\"ttl\":\"10\"}"
+        "say #!builtin_text-p0tzjd"
       ],
       "onReceive": null
     },
@@ -109,6 +111,33 @@
       "onEnter": [
         "increment_question_none {}",
         "say #!builtin_text-Jm90EV"
+      ],
+      "onReceive": null
+    },
+    {
+      "id": "624343673a",
+      "name": "global_cpt",
+      "next": [
+        {
+          "condition": "true",
+          "node": "entry"
+        }
+      ],
+      "onEnter": [
+        "builtin/resetContext {}",
+        "builtin/setVariable {\"type\":\"session\",\"name\":\"nb_question_hobby\",\"value\":\"0\"}",
+        "builtin/setVariable {\"type\":\"session\",\"name\":\"nb_question_sport\",\"value\":\"0\"}",
+        "builtin/setVariable {\"type\":\"session\",\"name\":\"nb_question_humanity\",\"value\":\"0\"}",
+        "builtin/setVariable {\"type\":\"session\",\"name\":\"nb_question_none\",\"value\":\"0\"}",
+        "builtin/setVariable {\"type\":\"session\",\"name\":\"nb_question_pro\",\"value\":\"0\"}",
+        "builtin/setVariable {\"type\":\"session\",\"name\":\"nb_message\",\"value\":\"0\"}",
+        "builtin/setVariable {\"type\":\"session\",\"name\":\"nb_question_perso\",\"value\":\"0\"}",
+        "builtin/setVariable {\"type\":\"session\",\"name\":\"nb_question_self\",\"value\":\"0\"}",
+        "builtin/setVariable {\"type\":\"session\",\"name\":\"nb_question_music\",\"value\":\"0\"}",
+        "builtin/setVariable {\"type\":\"session\",\"name\":\"none_limit\",\"value\":\"2\"}",
+        "builtin/setVariable {\"type\":\"session\",\"name\":\"msg_limit\",\"value\":\"10\"}",
+        "builtin/setVariable {\"type\":\"session\",\"name\":\"pro_limit\",\"value\":\"5\"}",
+        "builtin/setVariable {\"type\":\"session\",\"name\":\"perso_limit\",\"value\":\"4\"}"
       ],
       "onReceive": null
     }

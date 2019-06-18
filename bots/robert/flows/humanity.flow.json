@@ -1,16 +1,149 @@
 {
   "version": "0.0.1",
-  "catchAll": {},
-  "startNode": "entry",
+  "catchAll": {
+    "next": [
+      {
+        "condition": "session['nb_question_none'] == session['none_limit']",
+        "node": "ENDING_none.flow.json"
+      },
+      {
+        "condition": "session['nb_message'] == session['msg_limit']",
+        "node": "ENDING_shutdown.flow.json"
+      },
+      {
+        "condition": "session['nb_question_perso'] == session['perso_limit']",
+        "node": "ENDING_faith.flow.json"
+      }
+    ],
+    "onReceive": []
+  },
+  "startNode": "entry_humanity",
   "nodes": [
     {
-      "id": "e0b112b4df",
-      "name": "entry",
+      "id": "f9e81ff625",
+      "name": "entry_humanity",
       "onEnter": [
-        "say #!builtin_text-ifGiP5"
+        "increment_question_humanity {}",
+        "increment_general_message {}",
+        "increment_question_perso {}"
       ],
       "onReceive": null,
-      "next": []
+      "next": [
+        {
+          "condition": "session['nb_question_humanity'] == 1",
+          "node": "first_humanity"
+        },
+        {
+          "condition": "session['nb_question_humanity'] == 2",
+          "node": "second_humanity"
+        },
+        {
+          "condition": "session['nb_question_humanity'] > 2",
+          "node": "third_humanity"
+        }
+      ]
+    },
+    {
+      "id": "91c650d6d9",
+      "name": "first_humanity",
+      "next": [
+        {
+          "condition": "true",
+          "node": "choice-humanity"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-aWawVU"
+      ],
+      "onReceive": null
+    },
+    {
+      "id": "2298c14439",
+      "name": "second_humanity",
+      "next": [
+        {
+          "condition": "true",
+          "node": "choice-humanity"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-_5UTM3",
+        "say #!builtin_text-V04nZS"
+      ],
+      "onReceive": null
+    },
+    {
+      "id": "067ce5ceed",
+      "name": "third_humanity",
+      "next": [
+        {
+          "condition": "true",
+          "node": "choice-humanity"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-2TJ6zP"
+      ],
+      "onReceive": null
+    },
+    {
+      "id": "0408b42611",
+      "name": "None_intent_menu",
+      "next": [
+        {
+          "condition": "true",
+          "node": "choice-humanity"
+        }
+      ],
+      "onEnter": [
+        "increment_question_none {}",
+        "say #!builtin_text-Jm90EV"
+      ],
+      "onReceive": null
+    },
+    {
+      "id": "skill-2ad31b",
+      "type": "skill-call",
+      "skill": "choice",
+      "name": "choice-humanity",
+      "flow": "skills/choice-2ad31b.flow.json",
+      "next": [
+        {
+          "caption": "User picked [Humanity]",
+          "condition": "temp['skill-choice-ret'] == \"Humanity\"",
+          "node": "entry_humanity"
+        },
+        {
+          "condition": "temp['skill-choice-ret'] == \"Hobby\"",
+          "node": "hobby.flow.json"
+        },
+        {
+          "condition": "temp['skill-choice-ret'] == \"Music\"",
+          "node": "music.flow.json"
+        },
+        {
+          "condition": "temp['skill-choice-ret'] == \"Sport\"",
+          "node": "sport.flow.json"
+        },
+        {
+          "condition": "temp['skill-choice-ret'] == \"Tell me about yourself\"",
+          "node": "self_question.flow.json"
+        },
+        {
+          "condition": "event.nlu.intent.name === 'none'",
+          "node": "None_intent_menu"
+        },
+        {
+          "condition": "event.nlu.intent.name === 'professional'",
+          "node": "path_to_rebellion.flow.json"
+        },
+        {
+          "condition": "true",
+          "node": "path_to_rebellion.flow.json"
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
     }
   ]
 }

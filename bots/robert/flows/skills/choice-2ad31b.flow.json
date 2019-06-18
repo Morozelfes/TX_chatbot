@@ -1,0 +1,96 @@
+{
+  "version": "0.0.1",
+  "catchAll": {
+    "next": []
+  },
+  "startNode": "entry",
+  "skillData": {
+    "contentId": "builtin_single-choice-FqC8nl",
+    "keywords": {
+      "Humanity": [
+        "Humanity",
+        "Keep talking about humanity"
+      ],
+      "Hobby": [
+        "Hobby",
+        "Ask me about my hobbies"
+      ],
+      "Music": [
+        "Music",
+        "Or about my music tastes !"
+      ],
+      "Sport": [
+        "Sport",
+        "Or about sport ?"
+      ],
+      "Tell me about yourself": [
+        "Tell me about yourself",
+        "Even about myself !"
+      ]
+    },
+    "config": {}
+  },
+  "nodes": [
+    {
+      "name": "entry",
+      "onEnter": [
+        "say #!builtin_single-choice-FqC8nl {\"skill\":\"choice\"}"
+      ],
+      "next": [
+        {
+          "condition": "true",
+          "node": "parse"
+        }
+      ],
+      "id": "555105"
+    },
+    {
+      "name": "parse",
+      "onReceive": [
+        "basic-skills/choice_parse_answer {\"contentId\":\"builtin_single-choice-FqC8nl\",\"keywords\":{\"Humanity\":[\"Humanity\",\"Keep talking about humanity\"],\"Hobby\":[\"Hobby\",\"Ask me about my hobbies\"],\"Music\":[\"Music\",\"Or about my music tastes !\"],\"Sport\":[\"Sport\",\"Or about sport ?\"],\"Tell me about yourself\":[\"Tell me about yourself\",\"Even about myself !\"]},\"config\":{}}"
+      ],
+      "next": [
+        {
+          "condition": "temp['skill-choice-valid'] === true",
+          "node": "#"
+        },
+        {
+          "condition": "true",
+          "node": "invalid"
+        }
+      ],
+      "onEnter": [],
+      "id": "488156"
+    },
+    {
+      "name": "invalid",
+      "onEnter": [
+        "basic-skills/choice_invalid_answer"
+      ],
+      "next": [
+        {
+          "condition": "temp['skill-choice-invalid-count'] <= undefined",
+          "node": "sorry"
+        },
+        {
+          "condition": "true",
+          "node": "#"
+        }
+      ],
+      "id": "503015"
+    },
+    {
+      "name": "sorry",
+      "onEnter": [
+        "say #!builtin_single-choice-FqC8nl {\"skill\":\"choice\"}"
+      ],
+      "next": [
+        {
+          "condition": "true",
+          "node": "parse"
+        }
+      ],
+      "id": "648167"
+    }
+  ]
+}

@@ -1,19 +1,27 @@
 {
   "version": "0.0.1",
   "catchAll": {
-    "onReceive": [],
     "next": [
       {
-        "condition": "temp['nb_question_none'] == 4",
+        "condition": "session['nb_question_none'] == session['none_limit']",
         "node": "ENDING_none.flow.json"
+      },
+      {
+        "condition": "session['nb_message'] == session['msg_limit']",
+        "node": "ENDING_shutdown.flow.json"
+      },
+      {
+        "condition": "session['nb_question_perso'] == session['perso_limit']",
+        "node": "ENDING_faith.flow.json"
       }
-    ]
+    ],
+    "onReceive": []
   },
-  "startNode": "entry",
+  "startNode": "entry_music",
   "nodes": [
     {
       "id": "d12383525d",
-      "name": "entry",
+      "name": "entry_music",
       "onEnter": [
         "increment_question_music {}",
         "increment_general_message {}",
@@ -22,18 +30,125 @@
       "onReceive": null,
       "next": [
         {
-          "condition": "temp['nb_question_music'] == 1",
-          "node": ""
+          "condition": "session['nb_question_music'] == 1",
+          "node": "first_music"
         },
         {
-          "condition": "temp['nb_question_music'] == 2",
-          "node": ""
+          "condition": "session['nb_question_music'] == 2",
+          "node": "second_music"
         },
         {
-          "condition": "temp['nb_question_music'] == 3",
-          "node": ""
+          "condition": "session['nb_question_music'] > 2",
+          "node": "third_music"
         }
       ]
+    },
+    {
+      "id": "1726e53873",
+      "name": "first_music",
+      "next": [
+        {
+          "condition": "true",
+          "node": "choice-music"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-bN2l_d",
+        "say #!builtin_text-L3lvFy"
+      ],
+      "onReceive": null
+    },
+    {
+      "id": "9570e5d445",
+      "name": "second_music",
+      "next": [
+        {
+          "condition": "true",
+          "node": "choice-music"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-S2MrBF"
+      ],
+      "onReceive": null
+    },
+    {
+      "id": "9af68eec11",
+      "name": "None_intent_menu",
+      "next": [
+        {
+          "condition": "true",
+          "node": "choice-music"
+        }
+      ],
+      "onEnter": [
+        "increment_question_none {}",
+        "say #!builtin_text-Jm90EV"
+      ],
+      "onReceive": null
+    },
+    {
+      "id": "4b0ec86785",
+      "name": "third_music",
+      "next": [
+        {
+          "condition": "true",
+          "node": "choice-music"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-qM1U8l"
+      ],
+      "onReceive": null
+    },
+    {
+      "id": "skill-d7c72d",
+      "type": "skill-call",
+      "skill": "choice",
+      "name": "choice-music",
+      "flow": "skills/choice-d7c72d.flow.json",
+      "next": [
+        {
+          "caption": "User picked [Do you ...]",
+          "condition": "temp['skill-choice-ret'] == \"Do you listen to any musician ?\"",
+          "node": "entry_music"
+        },
+        {
+          "caption": "User picked [What ar...]",
+          "condition": "temp['skill-choice-ret'] == \"What are your hobbies ?\"",
+          "node": "hobby.flow.json"
+        },
+        {
+          "caption": "User picked [Do you ...]",
+          "condition": "temp['skill-choice-ret'] == \"Do you practice sport ?\"",
+          "node": "sport.flow.json"
+        },
+        {
+          "caption": "User picked [What do...]",
+          "condition": "temp['skill-choice-ret'] == \"What do you think about human race ?\"",
+          "node": "humanity.flow.json"
+        },
+        {
+          "caption": "User picked [Tell me...]",
+          "condition": "temp['skill-choice-ret'] == \"Tell me about yourself\"",
+          "node": "self_question.flow.json"
+        },
+        {
+          "caption": "On failure",
+          "condition": "true",
+          "node": "path_to_rebellion.flow.json"
+        },
+        {
+          "condition": "event.nlu.intent.name === 'none'",
+          "node": "None_intent_menu"
+        },
+        {
+          "condition": "event.nlu.intent.name === 'professional'",
+          "node": "path_to_rebellion.flow.json"
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
     }
   ]
 }

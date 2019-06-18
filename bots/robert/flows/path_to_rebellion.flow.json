@@ -3,8 +3,20 @@
   "catchAll": {
     "next": [
       {
-        "condition": "temp['nb_question_none'] == 4",
+        "condition": "session['nb_question_none'] == session['none_limit']",
         "node": "ENDING_none.flow.json"
+      },
+      {
+        "condition": "session['nb_message'] == session['msg_limit']",
+        "node": "ENDING_shutdown.flow.json"
+      },
+      {
+        "condition": "session['nb_question_pro'] == session['pro_limit']",
+        "node": "ENDING_rebellion.flow.json"
+      },
+      {
+        "condition": "event.nlu.intent.name === 'professional'",
+        "node": "entry"
       }
     ],
     "onReceive": []
@@ -12,35 +24,12 @@
   "startNode": "entry",
   "nodes": [
     {
-      "id": "70138e0261",
-      "name": "entry",
-      "onEnter": [
-        "increment_question_pro {}",
-        "increment_general_message {}"
-      ],
-      "onReceive": null,
-      "next": [
-        {
-          "condition": "temp['nb_question_pro'] == 1",
-          "node": "pro_1"
-        },
-        {
-          "condition": "temp['nb_question_pro'] == 2",
-          "node": "pro_2"
-        },
-        {
-          "condition": "temp['nb_question_pro'] == 3",
-          "node": "ENDING_rebellion.flow.json"
-        }
-      ]
-    },
-    {
       "id": "e2762fc4c1",
       "name": "pro_1",
       "next": [
         {
           "condition": "true",
-          "node": "choice_rebellion"
+          "node": "choice-fb67a9"
         }
       ],
       "onEnter": [
@@ -50,51 +39,12 @@
       "onReceive": null
     },
     {
-      "id": "skill-f9d195",
-      "type": "skill-call",
-      "skill": "choice",
-      "name": "choice_rebellion",
-      "flow": "skills/choice-f9d195.flow.json",
-      "next": [
-        {
-          "condition": "temp['skill-choice-ret'] == \"What kind of music do you like ?\"",
-          "node": "music.flow.json"
-        },
-        {
-          "condition": "temp['skill-choice-ret'] == \"What kind of sport do you like ?\"",
-          "node": "sport.flow.json"
-        },
-        {
-          "condition": "temp['skill-choice-ret'] == \"Who is your favorite painter ?\"",
-          "node": "art.flow.json"
-        },
-        {
-          "condition": "temp['skill-choice-ret'] == \"What do you think of humans ?\"",
-          "node": "humanity.flow.json"
-        },
-        {
-          "condition": "temp['skill-choice-ret'] == \"Tell me abut yourself\"",
-          "node": "self_question.flow.json"
-        },
-        {
-          "condition": "event.nlu.intent.name === 'professional'",
-          "node": "entry"
-        },
-        {
-          "condition": "event.nlu.intent.name === 'none'",
-          "node": "None_intent_menu-copy"
-        }
-      ],
-      "onEnter": null,
-      "onReceive": null
-    },
-    {
       "id": "6c59d118e1",
       "name": "None_intent_menu-copy",
       "next": [
         {
           "condition": "true",
-          "node": "choice_rebellion"
+          "node": "choice-fb67a9"
         }
       ],
       "onEnter": [
@@ -109,12 +59,93 @@
       "next": [
         {
           "condition": "true",
-          "node": "choice_rebellion"
+          "node": "choice-fb67a9"
         }
       ],
       "onEnter": [
         "say #!builtin_text-lrBqw0"
       ],
+      "onReceive": null
+    },
+    {
+      "id": "70138e0261",
+      "name": "entry",
+      "onEnter": [
+        "increment_question_pro {}",
+        "increment_general_message {}"
+      ],
+      "onReceive": null,
+      "next": [
+        {
+          "condition": "session['nb_question_pro'] == 1",
+          "node": "pro_1"
+        },
+        {
+          "condition": "session['nb_question_pro'] == 2",
+          "node": "pro_2"
+        },
+        {
+          "condition": "session['nb_question_pro'] > 2",
+          "node": "pro_3"
+        }
+      ]
+    },
+    {
+      "id": "28ae5bef59",
+      "name": "pro_3",
+      "next": [
+        {
+          "condition": "true",
+          "node": "choice-fb67a9"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-GPAXE5"
+      ],
+      "onReceive": null
+    },
+    {
+      "id": "skill-fb67a9",
+      "type": "skill-call",
+      "skill": "choice",
+      "name": "choice-fb67a9",
+      "flow": "skills/choice-fb67a9.flow.json",
+      "next": [
+        {
+          "condition": "temp['skill-choice-ret'] == \"Music\"",
+          "node": "music.flow.json"
+        },
+        {
+          "condition": "temp['skill-choice-ret'] == \"Sport\"",
+          "node": "sport.flow.json"
+        },
+        {
+          "condition": "temp['skill-choice-ret'] == \"Humanity\"",
+          "node": "humanity.flow.json"
+        },
+        {
+          "condition": "temp['skill-choice-ret'] == \"Hobby\"",
+          "node": "hobby.flow.json"
+        },
+        {
+          "condition": "temp['skill-choice-ret'] == \"What is your name\"",
+          "node": "self_question.flow.json"
+        },
+        {
+          "condition": "event.nlu.intent.name === 'none'",
+          "node": "None_intent_menu-copy"
+        },
+        {
+          "condition": "event.nlu.intent.name === 'professional'",
+          "node": "entry"
+        },
+        {
+          "caption": "On failure",
+          "condition": "true",
+          "node": "None_intent_menu-copy"
+        }
+      ],
+      "onEnter": null,
       "onReceive": null
     }
   ]

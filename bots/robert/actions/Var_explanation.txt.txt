@@ -1,0 +1,20 @@
+User alterable :
+
+- nb_question_sport : number of question linked to art
+- nb_question_hobby : number of question linked to hobby
+- nb_question_humanity : number of question linked to humanity
+- nb_question_music : number of question linked to music
+- nb_question_self : number of question linked to bot itself 
+
+- nb_question_perso : number of question linked to one of the above
+
+- nb_question_pro : number of question linked to professional content
+- nb_question_none : number of question linked to nothing
+- nb_message : number of total messages sent
+
+Constant (defined in enter node of main) :
+
+- none_limit : number of none messages allowed, none ending
+- msg_limit : number of total messages, neutral ending
+- pro_limit : number of pro messages limit, bad ending
+- perso_limit : number of message needed for good ending
