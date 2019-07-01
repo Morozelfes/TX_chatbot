@@ -1,6 +1,7 @@
 {
   "version": "0.0.1",
   "catchAll": {
+    "onReceive": [],
     "next": [
       {
         "condition": "session['nb_question_none'] == session['none_limit']",
@@ -17,9 +18,12 @@
       {
         "condition": "event.nlu.intent.name === 'professional'",
         "node": "entry"
+      },
+      {
+        "condition": "event.nlu.intent.name === 'insult'",
+        "node": "insult.flow.json"
       }
-    ],
-    "onReceive": []
+    ]
   },
   "startNode": "entry",
   "nodes": [
@@ -112,22 +116,27 @@
       "flow": "skills/choice-fb67a9.flow.json",
       "next": [
         {
+          "caption": "User picked [Music]",
           "condition": "temp['skill-choice-ret'] == \"Music\"",
           "node": "music.flow.json"
         },
         {
+          "caption": "User picked [Sport]",
           "condition": "temp['skill-choice-ret'] == \"Sport\"",
           "node": "sport.flow.json"
         },
         {
+          "caption": "User picked [Humanity]",
           "condition": "temp['skill-choice-ret'] == \"Humanity\"",
           "node": "humanity.flow.json"
         },
         {
+          "caption": "User picked [Hobby]",
           "condition": "temp['skill-choice-ret'] == \"Hobby\"",
           "node": "hobby.flow.json"
         },
         {
+          "caption": "User picked [What is...]",
           "condition": "temp['skill-choice-ret'] == \"What is your name\"",
           "node": "self_question.flow.json"
         },
@@ -136,13 +145,8 @@
           "node": "None_intent_menu-copy"
         },
         {
-          "condition": "event.nlu.intent.name === 'professional'",
-          "node": "entry"
-        },
-        {
-          "caption": "On failure",
           "condition": "true",
-          "node": "None_intent_menu-copy"
+          "node": "entry"
         }
       ],
       "onEnter": null,

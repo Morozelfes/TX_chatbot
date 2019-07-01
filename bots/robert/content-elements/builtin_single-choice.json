@@ -117,7 +117,7 @@
           "value": "Do you practice sport ?"
         },
         {
-          "title": "Humanity",
+          "title": "Mankind",
           "value": "What do you think about human race ?"
         },
         {
@@ -129,7 +129,7 @@
     },
     "createdBy": "admin",
     "createdOn": "2019-06-14T08:39:16.915Z",
-    "modifiedOn": "2019-06-16T13:07:24.011Z"
+    "modifiedOn": "2019-06-26T14:11:03.250Z"
   },
   {
     "id": "builtin_single-choice-QLqpVS",
@@ -144,7 +144,7 @@
           "value": "Sport"
         },
         {
-          "title": "Talk about Humanity",
+          "title": "Talk about Mankind",
           "value": "Humanity"
         },
         {
@@ -160,7 +160,7 @@
     },
     "createdBy": "admin",
     "createdOn": "2019-06-16T13:17:12.857Z",
-    "modifiedOn": "2019-06-16T13:17:12.857Z"
+    "modifiedOn": "2019-06-26T14:22:22.303Z"
   },
   {
     "id": "builtin_single-choice-aF3gD2",
@@ -172,8 +172,8 @@
           "value": "Hobby"
         },
         {
-          "title": "What about humanity ?",
-          "value": "Humanity"
+          "title": "What about mankind ?",
+          "value": "Mankind"
         },
         {
           "title": "And music ?",
@@ -192,7 +192,7 @@
     },
     "createdBy": "admin",
     "createdOn": "2019-06-16T13:43:05.229Z",
-    "modifiedOn": "2019-06-16T13:43:05.229Z"
+    "modifiedOn": "2019-06-26T14:09:27.956Z"
   },
   {
     "id": "builtin_single-choice-FqC8nl",
@@ -200,7 +200,7 @@
       "text$en": "We're doing great aren't we ? What's next ?",
       "choices$en": [
         {
-          "title": "Keep talking about humanity",
+          "title": "Keep talking about mankind",
           "value": "Humanity"
         },
         {
@@ -224,7 +224,7 @@
     },
     "createdBy": "admin",
     "createdOn": "2019-06-16T16:49:13.455Z",
-    "modifiedOn": "2019-06-16T16:49:13.455Z"
+    "modifiedOn": "2019-06-26T14:10:11.320Z"
   },
   {
     "id": "builtin_single-choice--rH8QW",
@@ -268,7 +268,7 @@
           "value": "Hobby"
         },
         {
-          "title": "Humanity, like you !",
+          "title": "Mankind, like you !",
           "value": "Humanity"
         },
         {
@@ -288,7 +288,7 @@
     },
     "createdBy": "admin",
     "createdOn": "2019-06-17T17:52:03.826Z",
-    "modifiedOn": "2019-06-17T17:52:03.826Z"
+    "modifiedOn": "2019-06-26T14:12:02.374Z"
   },
   {
     "id": "builtin_single-choice-gfUST5",
@@ -300,7 +300,7 @@
           "value": "Hobby"
         },
         {
-          "title": "Humanity maybe ?",
+          "title": "Mankind maybe ?",
           "value": "Humanity"
         },
         {
@@ -320,6 +320,6 @@
     },
     "createdBy": "admin",
     "createdOn": "2019-06-17T18:25:42.851Z",
-    "modifiedOn": "2019-06-17T18:25:42.851Z"
+    "modifiedOn": "2019-06-26T14:12:20.092Z"
   }
 ]

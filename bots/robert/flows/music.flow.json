@@ -1,6 +1,7 @@
 {
   "version": "0.0.1",
   "catchAll": {
+    "onReceive": [],
     "next": [
       {
         "condition": "session['nb_question_none'] == session['none_limit']",
@@ -13,9 +14,12 @@
       {
         "condition": "session['nb_question_perso'] == session['perso_limit']",
         "node": "ENDING_faith.flow.json"
+      },
+      {
+        "condition": "event.nlu.intent.name === ''",
+        "node": "insult.flow.json"
       }
-    ],
-    "onReceive": []
+    ]
   },
   "startNode": "entry_music",
   "nodes": [
@@ -134,16 +138,12 @@
           "node": "self_question.flow.json"
         },
         {
-          "caption": "On failure",
-          "condition": "true",
-          "node": "path_to_rebellion.flow.json"
-        },
-        {
           "condition": "event.nlu.intent.name === 'none'",
           "node": "None_intent_menu"
         },
         {
-          "condition": "event.nlu.intent.name === 'professional'",
+          "caption": "On failure",
+          "condition": "true",
           "node": "path_to_rebellion.flow.json"
         }
       ],

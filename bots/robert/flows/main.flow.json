@@ -1,6 +1,7 @@
 {
   "version": "0.0.1",
   "catchAll": {
+    "onReceive": [],
     "next": [
       {
         "condition": "session['nb_message'] == session['msg_limit']",
@@ -11,11 +12,10 @@
         "node": "ENDING_none.flow.json"
       },
       {
-        "condition": "event.nlu.intent.name === 'music'",
-        "node": "music.flow.json"
+        "condition": "event.nlu.intent.name === 'insult'",
+        "node": "insult.flow.json"
       }
-    ],
-    "onReceive": []
+    ]
   },
   "startNode": "global_cpt",
   "nodes": [
@@ -137,7 +137,8 @@
         "builtin/setVariable {\"type\":\"session\",\"name\":\"none_limit\",\"value\":\"2\"}",
         "builtin/setVariable {\"type\":\"session\",\"name\":\"msg_limit\",\"value\":\"10\"}",
         "builtin/setVariable {\"type\":\"session\",\"name\":\"pro_limit\",\"value\":\"5\"}",
-        "builtin/setVariable {\"type\":\"session\",\"name\":\"perso_limit\",\"value\":\"4\"}"
+        "builtin/setVariable {\"type\":\"session\",\"name\":\"perso_limit\",\"value\":\"4\"}",
+        "builtin/setVariable {\"type\":\"session\",\"name\":\"nb_insult\",\"value\":\"0\"}"
       ],
       "onReceive": null
     }

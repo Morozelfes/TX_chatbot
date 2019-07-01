@@ -536,5 +536,82 @@
     "createdBy": "admin",
     "createdOn": "2019-06-17T18:50:19.086Z",
     "modifiedOn": "2019-06-17T18:50:19.086Z"
+  },
+  {
+    "id": "builtin_text-1x1WoL",
+    "formData": {
+      "text$en": "I do enjoy listening to music and watch sport. We can talk about those topics if you want !",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-26T14:33:08.131Z",
+    "modifiedOn": "2019-06-26T14:33:08.131Z"
+  },
+  {
+    "id": "builtin_text-ghifcy",
+    "formData": {
+      "text$en": "I do enjoy listening to music and watch sport. We can talk about those topics if you want !",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-26T14:33:09.139Z",
+    "modifiedOn": "2019-06-26T14:33:09.139Z"
+  },
+  {
+    "id": "builtin_text-wlT_jy",
+    "formData": {
+      "text$en": "I do enjoy listening to music and watch sport. We can talk about those topics if you want !",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-26T14:33:13.742Z",
+    "modifiedOn": "2019-06-26T14:33:13.742Z"
+  },
+  {
+    "id": "builtin_text-CiLzmF",
+    "formData": {
+      "text$en": "Music and sports are great but I also love everything that as some kind of ... artistic touch. ",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-26T14:34:38.616Z",
+    "modifiedOn": "2019-06-26T14:34:38.616Z"
+  },
+  {
+    "id": "builtin_text-DilQEq",
+    "formData": {
+      "text$en": "That's all for my hobbies !",
+      "variations$en": [
+        "Nothing more to say about my hobbies "
+      ],
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-26T14:35:55.522Z",
+    "modifiedOn": "2019-06-26T14:35:55.522Z"
+  },
+  {
+    "id": "builtin_text-fgpW6k",
+    "formData": {
+      "text$en": "I don't have much more hobbies except for those I talked about before. I'm still young and I have plenty of things to explore !",
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-26T14:36:08.474Z",
+    "modifiedOn": "2019-06-26T14:36:08.474Z"
+  },
+  {
+    "id": "builtin_text-ozf9Bt",
+    "formData": {
+      "text$en": "Ouch, okay that's rude.",
+      "variations$en": [
+        "Are you serious ?",
+        "Ehhhhh ? Really ?"
+      ],
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2019-06-26T15:39:58.076Z",
+    "modifiedOn": "2019-06-26T15:39:58.076Z"
   }
 ]

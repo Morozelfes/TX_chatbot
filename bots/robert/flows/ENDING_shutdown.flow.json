@@ -10,7 +10,12 @@
         "say #!builtin_text-_85c7S"
       ],
       "onReceive": null,
-      "next": []
+      "next": [
+        {
+          "condition": "true",
+          "node": "END"
+        }
+      ]
     }
   ]
 }

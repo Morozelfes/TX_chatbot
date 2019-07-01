@@ -11,6 +11,7 @@ User alterable :
 - nb_question_pro : number of question linked to professional content
 - nb_question_none : number of question linked to nothing
 - nb_message : number of total messages sent
+- nb_insult : number of insults 
 
 Constant (defined in enter node of main) :
 

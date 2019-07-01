@@ -26,6 +26,10 @@
       "Sport": [
         "Sport",
         "A bit of sport ?"
+      ],
+      "Mankind": [
+        "Mankind",
+        "What about mankind ?"
       ]
     },
     "config": {}
@@ -42,7 +46,7 @@
           "node": "parse"
         }
       ],
-      "id": "802050"
+      "id": "014482"
     },
     {
       "name": "parse",
@@ -60,7 +64,7 @@
         }
       ],
       "onEnter": [],
-      "id": "584931"
+      "id": "518346"
     },
     {
       "name": "invalid",
@@ -77,7 +81,7 @@
           "node": "#"
         }
       ],
-      "id": "833384"
+      "id": "136805"
     },
     {
       "name": "sorry",
@@ -90,7 +94,7 @@
           "node": "parse"
         }
       ],
-      "id": "042286"
+      "id": "177302"
     }
   ]
 }

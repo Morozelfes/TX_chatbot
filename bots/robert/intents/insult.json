@@ -1,0 +1,20 @@
+{
+  "name": "insult",
+  "utterances": [
+    "bitch",
+    "son of a bitch",
+    "you are shit",
+    "blow me",
+    "suck me",
+    "go fuck yourself",
+    "bastard",
+    "asshole",
+    "fuck you",
+    "fuck",
+    "shit"
+  ],
+  "slots": [],
+  "contexts": [
+    "global"
+  ]
+}

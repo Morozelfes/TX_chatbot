@@ -2,7 +2,7 @@
 
 const _ = require('lodash');
 
-const increment_question_art = async () => {
+const increment_question_sport = async () => {
 	const key = 'nb_question_sport';
 	var value = parseInt(session[key]);
 	value +=1;

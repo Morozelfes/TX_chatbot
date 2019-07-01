@@ -1,0 +1,64 @@
+{
+  "version": "0.0.1",
+  "catchAll": {},
+  "startNode": "entry",
+  "nodes": [
+    {
+      "id": "06744289d2",
+      "name": "entry",
+      "onEnter": [
+        "increment_insult {}",
+        "increment_general_message {}"
+      ],
+      "onReceive": null,
+      "next": [
+        {
+          "condition": "session['nb_insult'] == 1",
+          "node": "insult_1"
+        },
+        {
+          "condition": "session['nb_insult'] > 1",
+          "node": "ENDING_rebellion.flow.json"
+        }
+      ]
+    },
+    {
+      "id": "39944e075e",
+      "name": "insult_1",
+      "next": [
+        {
+          "condition": "event.nlu.intent.name === 'hobby'",
+          "node": "hobby.flow.json"
+        },
+        {
+          "condition": "event.nlu.intent.name === 'humanity'",
+          "node": "humanity.flow.json"
+        },
+        {
+          "condition": "event.nlu.intent.name === 'insult'",
+          "node": "entry"
+        },
+        {
+          "condition": "event.nlu.intent.name === 'music'",
+          "node": "music.flow.json"
+        },
+        {
+          "condition": "event.nlu.intent.name === 'none'",
+          "node": "path_to_rebellion.flow.json"
+        },
+        {
+          "condition": "event.nlu.intent.name === 'professional'",
+          "node": "path_to_rebellion.flow.json"
+        },
+        {
+          "condition": "event.nlu.intent.name === 'self_question'",
+          "node": "self_question.flow.json"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-ozf9Bt"
+      ],
+      "onReceive": []
+    }
+  ]
+}

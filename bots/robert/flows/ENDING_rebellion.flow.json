@@ -13,7 +13,12 @@
         "say #!builtin_text-wfR1MS"
       ],
       "onReceive": [],
-      "next": []
+      "next": [
+        {
+          "condition": "true",
+          "node": "END"
+        }
+      ]
     }
   ]
 }
